@@ -6,7 +6,7 @@ Um site simples sobre hipercarros da Koenigsegg, feito pra mostrar um banner, al
 - banner (GIF)
 - cards dos modelos (clica que abre um modal com ficha técnica)
 - logo e imagens na pasta `img`
-- HTML, CSS e um pouco de JS pra abrir o modal
+- HTML, CSS 
 
 ## Como ver rápido
 1. Abrir `index.html` no navegador (duplo clique funciona).
