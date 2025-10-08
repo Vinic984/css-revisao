@@ -17,10 +17,7 @@ Um site simples sobre hipercarros da Koenigsegg, feito pra mostrar um banner, al
 - style.css — estilos
 - img/ — imagens (logo.jpg, gif e cards)
 
-## Quero contribuir?
-Se quiser mexer:
-- edite os arquivos
-- commite: `git add . && git commit -m "melhorar a estilização"`
 
 ## Contato
-Tem algo pra ajustar ou quer que eu melhore o visual? Me chama: koenigsee1@gmail.com
+Tem algo pra ajustar ou quer que eu melhore o visual? Me chama: tasaka343@gmail.com
+instagram - vini_xld
