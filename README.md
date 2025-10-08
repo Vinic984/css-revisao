@@ -20,4 +20,4 @@ Um site simples sobre hipercarros da Koenigsegg, feito pra mostrar um banner, al
 
 ## Contato
 Tem algo pra ajustar ou quer que eu melhore o visual? Me chama: tasaka343@gmail.com
-instagram - vini_xld
+Instagram: @vini_xld
