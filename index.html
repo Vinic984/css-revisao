@@ -24,28 +24,35 @@
 
     <main>
         <section id="home">
+            <h1>Bem-vindo à Koenigsegg</h1>
             <div class="gif-banner">
                 <img src="img/jesko-koenigsegg.gif" alt="Koenigsegg em movimento" class="banner-gif">
+                <button id="btnSaibaMais" class="btn-primary">Saiba Mais</button>
             </div>
         </section>
         
         <section id="products">
             <h2>Nossos Hipercarros</h2>
-            <div class="products">
+            <button id="btnAddProduto" class="btn-primary" style="margin-bottom: 20px;">Adicionar Produto</button>
+            <div class="products" id="productsGrid">
                 <div class="product" data-model="regera">
                     <img src="img/card1.jpg" alt="Koenigsegg Regera">
+                    <button class="btnVerMais">Ver Mais</button>
                 </div>
                 <div class="product" data-model="jesko">
                     <img src="img/card2.jpg" alt="Koenigsegg Jesko">
+                    <button class="btnVerMais">Ver Mais</button>
                 </div>
                 <div class="product" data-model="gemera">
                     <img src="img/card3.jpg" alt="Koenigsegg Gemera">
+                    <button class="btnVerMais">Ver Mais</button>
                 </div>
             </div>
         </section>
 
         <section id="about">
             <h2>Sobre a Koenigsegg</h2>
+            <button id="btnToggleDarkMode" class="btn-primary" style="margin-bottom: 20px;">Modo Escuro</button>
             <p>
                 A <strong>Koenigsegg Automotive AB</strong> é uma fabricante sueca de carros esportivos de alto desempenho, fundada em 1994 por <em>Christian von Koenigsegg</em>. Desde o início, a marca teve como missão criar o carro de produção mais rápido e tecnologicamente avançado do mundo.
             </p>
@@ -74,75 +81,6 @@
         </div>
     </div>
 
-    <script>
-    // Informações detalhadas dos carros
-    const carDetails = {
-        regara: {
-            name: "Koenigsegg Regera",
-            desc: "O Koenigsegg Regera é um hipercarro híbrido plug-in sueco projetado para desempenho extremo e luxo absoluto.",
-            list: [
-                "0-100 km/h: 2.8s",
-                "Potência: 1.500 cv (combinação motor V8 + motores elétricos)",
-                "Velocidade máxima: 410 km/h",
-                "Torque: 2.000 Nm",
-                "Transmissão: Direct Drive (KDD)",
-                "Peso: 1.590 kg",
-                "Produção limitada: 80 unidades"
-            ]
-        },
-        jesko: {
-            name: "Koenigsegg Jesko",
-            desc: "O Koenigsegg Jesko é voltado para pista, com foco absoluto em aerodinâmica, velocidade e precisão.",
-            list: [
-                "0-100 km/h: 2.6s",
-                "Potência: 1.280 cv (gasolina) / 1.600 cv (E85)",
-                "Velocidade máxima: +480 km/h (estimada)",
-                "Torque: 1.500 Nm",
-                "Transmissão: Light Speed Transmission (LST) de 9 marchas",
-                "Peso: 1.420 kg",
-                "Produção limitada: 125 unidades"
-            ]
-        },
-        gemera: {
-            name: "Koenigsegg Gemera",
-            desc: "O Koenigsegg Gemera é o primeiro Mega-GT do mundo, leva até quatro pessoas com desempenho de hipercarro.",
-            list: [
-                "0-100 km/h: 1.9s",
-                "Potência: 1.700 cv (combinação motor 3 cilindros + motores elétricos)",
-                "Velocidade máxima: 400 km/h",
-                "Torque: 3.500 Nm",
-                "Transmissão: Single Speed Koenigsegg Direct Drive",
-                "Peso: 1.850 kg",
-                "Produção limitada: 300 unidades"
-            ]
-        }
-    };
-
-    document.querySelectorAll('.product').forEach(card => {
-        card.addEventListener('click', function() {
-            let model = card.dataset.model;
-            if(model === "regera") model = "regara";
-            const details = carDetails[model];
-            if(details) {
-                document.getElementById('modalDetails').innerHTML = `
-                    <h3>${details.name}</h3>
-                    <p>${details.desc}</p>
-                    <ul>
-                        ${details.list.map(item => `<li>${item}</li>`).join('')}
-                    </ul>
-                `;
-                document.getElementById('carModal').style.display = 'flex';
-            }
-        });
-    });
-
-    document.getElementById('closeModal').onclick = function() {
-        document.getElementById('carModal').style.display = 'none';
-    };
-    window.onclick = function(event) {
-        const modal = document.getElementById('carModal');
-        if (event.target === modal) modal.style.display = 'none';
-    };
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

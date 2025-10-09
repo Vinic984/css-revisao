@@ -5,6 +5,11 @@ body {
     background-color: #121212;
     color: #f0f0f0;
     line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+body.light-mode {
+    background-color: #ffffff;
+    color: #333333;
 }
 header {
     position: fixed;
@@ -16,8 +21,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
     z-index: 1000;
+    transition: background-color 0.3s, color 0.3s;
+}
+body.light-mode header {
+    background-color: #f0f0f0;
+    color: #000000;
 }
 .logo-svg {
     height: 74px;
@@ -27,6 +38,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    box-sizing: border-box;
 }
 nav li {
     margin-left: 30px;
@@ -40,11 +52,19 @@ nav a {
     border-radius: 6px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+body.light-mode nav a {
+    color: #000000;
+}
 nav a:hover,
 nav a:focus {
     background-color: #2c2c2c;
     color: #cccccc;
     outline: none;
+}
+body.light-mode nav a:hover,
+body.light-mode nav a:focus {
+    background-color: #cccccc;
+    color: #333333;
 }
 main {
     padding: 140px 60px 60px 60px;
@@ -61,6 +81,11 @@ h2 {
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 20px;
+    transition: color 0.3s;
+}
+body.light-mode h1,
+body.light-mode h2 {
+    color: #000000;
 }
 .gif-banner {
     display: flex;
@@ -96,12 +121,17 @@ h2 {
     overflow: hidden;
     width: 370px;
     height: 500px;
-    transition: transform 0.25s, box-shadow 0.25s, border 0.25s;
+    transition: transform 0.25s, box-shadow 0.25s, border 0.25s, background 0.3s;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     border: 2px solid transparent;
+    position: relative;
+}
+body.light-mode .product {
+    background: #f0f0f0;
 }
 .product img {
     width: 100%;
@@ -116,6 +146,38 @@ h2 {
     box-shadow: 0 12px 48px #000d;
     border: 2px solid #FFD70077;
 }
+.btn-primary {
+    background-color: #FFD700;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.btn-primary:hover {
+    background-color: #ffed4e;
+}
+.btnVerMais {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FFD700;
+    color: #000000;
+    border: none;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btnVerMais:hover {
+    background-color: #ffed4e;
+}
 
 /* Modal customizado estilo cartão */
 .modal {
@@ -127,6 +189,9 @@ h2 {
     background: rgba(0,0,0,0.75);
     justify-content: center;
     align-items: center;
+}
+body.light-mode .modal {
+    background: rgba(255,255,255,0.75);
 }
 .modal-content {
     background: rgba(24, 24, 24, 0.97);
@@ -142,6 +207,11 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    transition: background 0.3s, color 0.3s;
+}
+body.light-mode .modal-content {
+    background: rgba(240, 240, 240, 0.97);
+    color: #000;
 }
 @keyframes fadeInModal {
     from { opacity: 0; transform: scale(0.92);}
